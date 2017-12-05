@@ -1,0 +1,14 @@
+<%= link_to "New candidate", new_candidate_path %>
+<ul>
+<% @candidates.each do |candidate| %>
+  <li>name: <%= candidate.name %></li>
+  <li>age: <%= candidate.age %></li>
+  <li>party: <%= candidate.party %></li>
+  <li>politics: <%= candidate.politics %></li>
+  <li>votes: <%= candidate.votes %></li>
+
+  <%= link_to "Vote to him", "#" %>
+  <%= link_to "Edit Page", edit_candidate_path(candidate) %>
+  <%= link_to "Delete Page", candidate_path(candidate), method: "delete", data: {confirm: "sure delete?"} %>
+<% end %>
+</ul>
