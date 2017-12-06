@@ -1,19 +1,6 @@
-<%= form_for @candidate do |f| %>
-  <%= f.label :name, "name" %>
-  <%= f.text_field :name %><br />
+  <h1>新增候選人</h1>
 
-  <%= f.label :age, "age" %>
-  <%= f.text_field :age %><br />
+  <%= render "form", candidate: @candidate %>
 
-  <%= f.label :party, "party" %>
-  <%= f.text_field :party %><br />    
-
-  <%= f.label :politics, "politics" %>
-  <%= f.text_area :politics %><br />
-
-  <%= f.submit %> 
-<% end %>
-
-<br />
-
-<%= link_to "Back to menu", candidates_path %>  
+  <br />
+  <%= link_to '回候選人列表', candidates_path %>
