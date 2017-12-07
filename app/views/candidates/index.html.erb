@@ -1,0 +1,17 @@
+<h1>Candidates list</h1>
+
+<%= link_to 'New a candidate', new_candidate_path %>
+
+<%= @candidates.each do |candidate| %>
+<ul>
+  <li><%= link_to "vote to this candidate", "#" %></li>
+  <li><%= candidate.name %></li>
+  <li><%= candidate.age %></li>
+  <li><%= candidate.party %></li>
+  <li><%= candidate.politics %></li>
+  <li><%= candidate.votes %></li>
+
+  <button><%= link_to 'Edit', edit_candidate_path(candidate) %></button>
+  <button><%= link_to 'Delete', candidate_path(candidate), method: "delete", data: { confirm: "sure delete?"} %></button>
+</ul>
+<% end %>

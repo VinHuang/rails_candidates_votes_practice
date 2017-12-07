@@ -1,0 +1,15 @@
+<%= form_for(candidate) do |f| %>
+  <%= f.label :name, 'name' %>
+  <%= f.text_field :name %><br>
+
+  <%= f.label :age, 'age' %>
+  <%= f.text_field :age %><br>
+
+  <%= f.label :party, 'party' %>
+  <%= f.text_field :party %><br>
+
+  <%= f.label :politics, 'politics' %>
+  <%= f.text_area :politics %><br>  
+
+  <%= f.submit %>
+<% end %>
