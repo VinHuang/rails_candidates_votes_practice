@@ -5,9 +5,9 @@
   <li>age: <%= candidate.age %></li>
   <li>party: <%= candidate.party %></li>
   <li>politics: <%= candidate.politics %></li>
-  <li>votes: <%= candidate.votes %></li>
+  <li>votes: <%= candidate.vote_logs.size %></li>
 
-  <%= link_to "Vote to him", "#" %>
+  <%= link_to "Vote to him", vote_candidate_path(candidate), method: "post", data: {confirm: "sure vote to him?"}, class:"btn btn-danger btn-xs" %>
   <%= link_to "Edit Page", edit_candidate_path(candidate) %>
   <%= link_to "Delete Page", candidate_path(candidate), method: "delete", data: {confirm: "sure delete?"} %>
 <% end %>
